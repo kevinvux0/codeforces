@@ -3,10 +3,10 @@
 
 #include <stdio.h>
 
-int mstrlen(char *b)
+int strlen(char *s)
 {
     int len = 0;
-    for (char *p = b; *p; ++p, ++len)
+    for (char *p = s; *p; ++p, ++len)
         ;
     return len;
 }
@@ -20,7 +20,7 @@ int main(void)
     {
         char buffer[101];
         scanf("%100s", buffer);
-        int len = mstrlen(buffer);
+        int len = strlen(buffer);
 
         if (len <= 10)
         {
